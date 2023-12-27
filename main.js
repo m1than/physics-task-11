@@ -92,7 +92,7 @@ document.getElementById('updateButton').addEventListener('click', () => {
   addOrUpdateRedDot(position);
 
   sumLatitudeLongitude = g(latitude);
-  document.querySelector('#sumDisplay') = sumLatitudeLongitude
+  document.querySelector('#sumDisplay').value = sumLatitudeLongitude
   updateSumDisplay();
 });
 
