@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Earth</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #myCanvas {
+            max-width: 70%;
+            height: auto;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #controlPanel {
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        #controlPanel input, #controlPanel button {
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        #controlPanel button {
+            background-color: #008CBA;
+            color: white;
+            cursor: pointer;
+        }
+
+        #controlPanel button:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <div id="controlPanel">
+        <input type="text" id="latitudeInput" placeholder="Введите широту">
+        <input type="text" id="longitudeInput" placeholder="Введите долготу">
+        <span id="sumDisplay">Ускорение свободного падения: 0</span>
+        <button id="updateButton">Обновить положение точки</button>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
